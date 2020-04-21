@@ -6,5 +6,7 @@ jest.json
 npm-debug.log
 logfile.log
 .env.local
+.env.test
+package-lock.json
 src/api/generated/swagger.json
 src/api/generated/routes.ts
