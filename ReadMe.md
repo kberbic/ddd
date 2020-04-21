@@ -8,7 +8,8 @@
 
     echo PORT=8080 >> .env.local
     echo DATABASE_URI=test >> .env.local
-    echo JWT_TOKEN=test >> .env.local
+    echo JWT_SECRET=test >> .env.local
+    echo JWT_EXPIRE_IN=60 >> .env.local
 
 ### How to run
 

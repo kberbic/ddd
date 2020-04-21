@@ -1,20 +1,19 @@
+/* eslint default-case: 0 */
 import * as express from 'express';
 
 import { IdentityError } from '../errors';
 import AuthDTO from '../.dto/authDTO';
+import UserService from '../.services/userService';
+import ServiceContext from '../.services/serviceContext';
 
-export function expressAuthentication(request: express.Request,
+export async function expressAuthentication(request: express.Request,
   securityName: string,
   scopes?: string[]): Promise<AuthDTO> {
-  let output: AuthDTO = null;
   switch (securityName) {
     case 'jwt': {
-      output = new AuthDTO({ id: 'test', name: 'test' });
+      return UserService.checkToken(new ServiceContext({ token: request.headers['authorization'] }))
+        .then((user) => new AuthDTO({ id: user._id, name: user.name }));
     }
-      break;
-      break;
-    default:
-      throw new IdentityError('INVALID_TOKEN', { internal: `${securityName} not exist for scopes ${scopes}` });
   }
-  return Promise.resolve(output);
+  throw new IdentityError('INVALID_TOKEN', { internal: `${securityName} not exist for scopes ${scopes}` });
 }

@@ -32,4 +32,26 @@ describe('UserService', () => {
       expect(output._id).toBeTruthy();
     });
   });
+
+  describe('getToken', () => {
+    it('should return one user info with token', async () => {
+      const output = await UserService.getToken(context, new GetUserDTO({
+        email: 'test@test.ba',
+        password: 'svirkaIpol19',
+      }));
+      expect(output).toBeTruthy();
+      expect(output._id).toBeTruthy();
+      expect(output.token).toBeTruthy();
+      context.token = output.token;
+    });
+  });
+
+  describe('checkToken', () => {
+    it('should return one user info from token', async () => {
+      const output = await UserService.checkToken(context);
+      expect(output).toBeTruthy();
+      expect(output._id).toBeTruthy();
+      expect(output.name).toBeTruthy();
+    });
+  });
 });

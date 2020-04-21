@@ -10,9 +10,9 @@
     "tsoa:dev": "tsoa swagger --host localhost:8080 -c ./tsoa.json && tsoa routes -c ./tsoa.json",
     "build": "npm run tsoa && rm -rf dist && tsc",
     "postinstall": "npm run build",
-    "test": "rm -rf jest.share && node ./jest.database.js | NODE_ENV=test.local jest",
-    "lint": "eslint src/*/*.ts src/*/configuration/*.ts src/*/routes/*.ts",
-    "lint:fix": "eslint --fix src/*/*.ts src/*/configuration/*.ts src/*/routes/*.ts"
+    "test": "rm -rf jest.share && node ./jest.database.js | NODE_ENV=test jest",
+    "lint": "eslint  src/*/*.ts src/.domains/*/*.ts src/.domains/*/*/*.ts src/*/configuration/*.ts src/*/routes/*.ts --no-ignore",
+    "lint:fix": "eslint --fix src/*/*.ts src/.domains/*/*.ts src/.domains/*/*/*.ts src/*/configuration/*.ts src/*/routes/*.ts --no-ignore"
   },
   "author": "",
   "license": "ISC",

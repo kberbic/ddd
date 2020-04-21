@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import ErrorModel from '../utils/errorModel';
 import BaseDTO from './baseDTO';
 
-export default class AddUserDTO extends BaseDTO {
+export default class AddUserDTO extends BaseDTO{
     name: string;
     email: string;
     password: string;
