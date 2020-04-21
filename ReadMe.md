@@ -1,4 +1,4 @@
-# Domain Driven Design with NodeJS and TypeScript
+# Domain Driven Design with NodeJS, TypeScript and MongoDB
 
 ### How to install
 
