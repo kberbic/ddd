@@ -1,4 +1,4 @@
-# Domain Driven Design with NodeJS, TypeScript and MongoDB
+# Domain Driven Design with NodeJS, TypeScript, MongoDB and tsoa (Swagger)
 
 ### How to install
 
