@@ -6,7 +6,7 @@ class CustomSequencer extends Sequencer {
         return copyTests
             .sort((testA, testB) =>
                 (Number(testA.path.split(".")[0]) > Number(testB.path.split(".")[0])
-                    ? -1 : 1));
+                    ? 1 : -1));
     }
 }
 
