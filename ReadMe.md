@@ -28,6 +28,8 @@
 
 ## Documentation
 
+![Screenshot](diagram.png)
+
 #### .domain - Domain Layer, all business implementation
 
 #### .services - Service Layer, in this case we can call this also Application Layer
