@@ -11,6 +11,10 @@
     echo JWT_SECRET=test >> .env.local
     echo JWT_EXPIRE_IN=60 >> .env.local
 
+### How to run tests
+
+    npm test
+    
 ### How to run
 
     npm start
