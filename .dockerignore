@@ -1,0 +1,18 @@
+# External service configs
+.circleci
+.github
+.idea
+.vscode
+
+# Git repo
+.git
+.gitignore
+
+# Node modules and built code
+node_modules
+dist
+test
+jest.config.js
+npm-debug.log
+README.md
+LICENSE

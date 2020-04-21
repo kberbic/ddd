@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+.idea/
+dist/
+jest.json
+npm-debug.log
+logfile.log
+.env.local
+src/api/generated/swagger.json
+src/api/generated/routes.ts

@@ -1,0 +1,42 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "dot-notation": "off",
+        "class-methods-use-this": "off",
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "no-lone-blocks": "off",
+        "no-underscore-dangle": "off",
+        "no-useless-constructor": "off",
+        "@typescript-eslint/no-explicit-any":"off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "no-restricted-syntax": "off",
+        "no-nested-ternary": "off",
+        "no-plusplus": "off",
+        "no-param-reassign": [2, {
+            "props": false
+        }]
+    }
+}

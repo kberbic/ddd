@@ -1,0 +1,29 @@
+{
+  "swagger": {
+    "outputDirectory": "./src/api/generated",
+    "entryFile": "./src/api/index.ts",
+    "basePath": "/api/v1",
+    "schemes": ["http","https"],
+    "host":"localhost:8080",
+    "specVersion": 3,
+    "yaml": false,
+    "securityDefinitions": {
+      "jwt": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "specMerging": "recursive"
+  },
+  "routes": {
+    "basePath": "/api/v1",
+    "entryFile": "./src/api/index.ts",
+    "routesDir": "./src/api/generated",
+    "middleware": "express",
+    "authenticationModule": "./src/auth/index.ts"
+  },
+  "ignore": [
+    "**/node_modules/**"
+  ]
+}

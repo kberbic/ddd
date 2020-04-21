@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ignore": ["src/api/generated/*", "README"],
+  "ext": "ts",
+  "exec": "tsoa swagger -c ./tsoa.json && tsoa routes -c ./tsoa.json && eslint src/*/*.ts src/*/configuration/*.ts src/*/routes/*.ts; ts-node ./src/api/index.ts"
+}
