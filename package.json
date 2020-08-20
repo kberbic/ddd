@@ -22,7 +22,7 @@
     "@types/mongodb": "^3.5.4",
     "@types/mongoose": "^5.7.8",
     "@types/node": "^13.9.8",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
